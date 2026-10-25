@@ -10,3 +10,7 @@ src/Android/.gradle
 src/Android/app/build
 src/Android/app/jni/SDL
 src/Android/app/src/main/AndroidManifest.xml
+.vscode/
+libs/
+libs_marker/
+*.tmp

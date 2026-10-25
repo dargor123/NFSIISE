@@ -2,6 +2,8 @@
 
 #include "User32.h"
 
+#include <string.h>
+
 #include <SDL2/SDL_messagebox.h>
 #include <SDL2/SDL_events.h>
 #include <SDL2/SDL_video.h>

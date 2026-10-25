@@ -2,6 +2,8 @@
 
 #include "DInput.h"
 
+#include <string.h>
+
 #ifdef NFS_CPP
 	void Release_wrap(void *);
 	void CreateDevice_wrap(void *);

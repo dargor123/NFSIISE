@@ -2,6 +2,8 @@
 
 #include "Wrapper.h"
 
+#include <string.h>
+
 extern BOOL linearSoundInterpolation;
 
 static void (REGPARM *getSamples)(void *samples, uint32_t num_samples_per_chn);

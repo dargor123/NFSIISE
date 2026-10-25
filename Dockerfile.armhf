@@ -1,0 +1,34 @@
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV CC="clang -m32"
+
+RUN dpkg --add-architecture armhf \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends \
+       build-essential \
+       clang \
+       gcc-arm-linux-gnueabihf \
+       g++-arm-linux-gnueabihf \
+       libc6-dev-armhf-cross \
+       libasound2-dev:armhf libpulse-dev:armhf \
+       libaudio-dev:armhf libjack-dev:armhf libsndio-dev:armhf libx11-dev:armhf libxext-dev:armhf \
+       libxrandr-dev:armhf libxcursor-dev:armhf libxfixes-dev:armhf libxi-dev:armhf libxss-dev:armhf \
+       libxkbcommon-dev:armhf libdrm-dev:armhf libgbm-dev:armhf libgl1-mesa-dev:armhf libgles2-mesa-dev:armhf \
+       libegl1-mesa-dev:armhf libdbus-1-dev:armhf libibus-1.0-dev:armhf libudev-dev:armhf fcitx-libs-dev:armhf \
+       libwayland-dev:armhf \
+       libdecor-0-dev:armhf \
+       libgl-dev:armhf \
+       libgl1-mesa-dev:armhf \
+       lld \
+       yasm \
+       cmake \
+       make \
+       git \
+       pkg-config \
+       ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /src
+
+CMD ["/bin/bash"]
